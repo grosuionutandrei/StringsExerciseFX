@@ -8,16 +8,19 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:controller="stringExercise.EvenHarderController" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stringExercise.EvenHarderController">
    <children>
       <Label text="Insert your input here">
          <font>
             <Font size="14.0" />
          </font>
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
       </Label>
       <TextField fx:id="sentenceInput" promptText="insert your sentence...">
          <VBox.margin>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            <Insets left="20.0" right="20.0" />
          </VBox.margin>
          <padding>
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -33,7 +36,7 @@
       </Label>
       <TextField fx:id="filter" promptText="Define your filter...">
          <VBox.margin>
-            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            <Insets left="20.0" right="20.0" />
          </VBox.margin>
       </TextField>
       <Label fx:id="output" text="Result will be displayed here">
@@ -41,7 +44,7 @@
             <Font size="14.0" />
          </font>
          <VBox.margin>
-            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </VBox.margin>
          <padding>
             <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
@@ -49,7 +52,7 @@
       </Label>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Button mnemonicParsing="false" prefWidth="100.0" text="Filter" onAction="#filterInput">
+            <Button mnemonicParsing="false" onAction="#filterInput" prefWidth="100.0" text="Filter">
                <font>
                   <Font size="14.0" />
                </font>
@@ -60,7 +63,7 @@
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
             </Button>
-            <Button mnemonicParsing="false" prefWidth="100.0" text="Expander" onAction="#expand">
+            <Button mnemonicParsing="false" onAction="#expand" prefWidth="100.0" text="Expander">
                <font>
                   <Font size="14.0" />
                </font>
@@ -71,7 +74,7 @@
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
             </Button>
-            <Button mnemonicParsing="false" prefWidth="100.0" text="Longest" onAction="#findLongest">
+            <Button mnemonicParsing="false" onAction="#findLongest" prefWidth="100.0" text="Longest">
                <font>
                   <Font size="14.0" />
                </font>
@@ -84,8 +87,40 @@
             </Button>
          </children>
          <VBox.margin>
-            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+            <Insets />
          </VBox.margin>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+         <children>
+            <Button mnemonicParsing="false" text="Back" onAction="#backToHarder">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Button>
+            <Button mnemonicParsing="false" text="Hardest" onAction="#goToHardest">
+               <font>
+                  <Font size="14.0" />
+               </font>
+               <HBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Button>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding>
       </HBox>
    </children>
 </VBox>
